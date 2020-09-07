@@ -1,6 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import sys
+import os
 # --------------------------------------------------------------------------------------------------
 # Set command line arguments
 argv = sys.argv
@@ -15,7 +16,8 @@ LOWER = int(argv[3])  # the exponent of the lower ω
 K = np.loadtxt(K_FILE)
 N = K.shape[0]
 DIR = "data_J_tan"
-FILE_FIG = "fig_Js.png"
+os.makedirs("figs", exist_ok=True)
+FILE_FIG = "figs/Js.png"
 # --------------------------------------------------------------------------------------------------
 
 
