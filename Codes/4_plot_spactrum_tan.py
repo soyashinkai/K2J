@@ -7,7 +7,7 @@ import os
 # Set command line arguments
 argv = sys.argv
 argc = len(argv)
-if (argc != 6):
+if (argc != 8):
     print("Usage: python " + argv[0] + " K_FILE UPPER LOWER")
     exit()
 K_FILE = argv[1]
@@ -15,10 +15,10 @@ UPPER = int(argv[2])
 LOWER = int(argv[3])
 PLT_UPPER = int(argv[4])
 PLT_LOWER = int(argv[5])
+MAX_LOG_tan = float(argv[6])
+ASPECT = float(argv[7])
 # --------------------------------------------------------------------------------------------------
-MAX_LOG_tan = 0.2
-MIN_LOG_tan = -0.2
-ASPECT = 0.8
+MIN_LOG_tan = -MAX_LOG_tan
 K = np.loadtxt(K_FILE)
 N = K.shape[0]
 M = 100 * (UPPER - LOWER)

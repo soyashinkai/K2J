@@ -7,18 +7,18 @@ import os
 # Set command line arguments
 argv = sys.argv
 argc = len(argv)
-if (argc != 6):
-    print("Usage: python " + argv[0] + " K_FILE UPPER LOWER")
+if (argc != 9):
+    print("Usage: python " + argv[0] + " K_FILE UPPER LOWER MAX_LOG_J MIN_LOG_J ASPECT")
     exit()
 K_FILE = argv[1]
 UPPER = int(argv[2])  # the exponent of the upper ω
 LOWER = int(argv[3])  # the exponent of the lower ω
 PLT_UPPER = int(argv[4])
 PLT_LOWER = int(argv[5])
+MAX_LOG_J = float(argv[6])
+MIN_LOG_J = float(argv[7])
+ASPECT = float(argv[8])
 # --------------------------------------------------------------------------------------------------
-MAX_LOG_J = 1.5
-MIN_LOG_J = -0.5
-ASPECT = 0.8
 K = np.loadtxt(K_FILE)
 N = K.shape[0]
 M = 100 * (UPPER - LOWER)
