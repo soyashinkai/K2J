@@ -42,10 +42,51 @@ K2J consists of the following four Python codes:
 -   3_plot_spactrum_J_abs.py
 -   4_plot_spactrum_tan.py
 
-### 1. Calculation of compliances _J'_, _J''_, | _J\*_ | and tanδ = _J'_ / _J''_ at angular frequencies _ω_
+### 1. Calculation of compliances _J'_, _J''_, | _J\*_ = _J'_ + _i J''_ | and tanδ = _J'_ / _J''_ at angular frequencies _ω_
+
+    python 1_calc_J_tan.py KFILE UPPER LOWER
+
+The command converts the input _K_ matrix data into the values of comliances _J'_, _J''_, | _J\*_ = _J'_ + _i J''_ | and tanδ = _J'_ / _J''_ at angular frequencies _10<sup>LOWER</sup> <= ω <= 10<sup>UPPER</sup>_.
+The output files named _J_tan_n{INDEX}.txt_ are stored in the newly made directory _data_J_tan_, where _0 <= INDEX < N_.
+
+-   K_FILE: the file name of an input _K_ matrix (_N_ x _N_ size),
+-   UPPER: the exponent of the upper angular freqeuncy _ω = 10<sup>UPPER</sup>_,
+-   LOWER: the exponent of the lower angular freqeuncy _ω = 10<sup>LOWER</sup>_.
 
 ### 2. Plot of _J'_ and _J''_ curves to the angular frequncy _ω_
 
+    python 2_plot_Js.py K_FILE UPPER LOWER
+
+The command plots _J'_ and _J''_ curves to the angular frequncy _ω_.
+The output file named _Js.png_ is stored in the newly made directory _figs_.
+
+-   K_FILE: the file name of an input _K_ matrix (_N_ x _N_ size),
+-   UPPER: the exponent of the upper angular freqeuncy _ω = 10<sup>UPPER</sup>_,
+-   LOWER: the exponent of the lower angular freqeuncy _ω = 10<sup>LOWER</sup>_.
+
 ### 3. Plot of | _J\*_ | spectrum
 
+    python 3_plot_spactrum_J_abs.py K_FILE UPPER LOWER PLT_UPPER PLT_LOWER
+
+The command plots the | _J\*_ | spectrum to the angular frequncy _ω_.
+The output file named _spectrum_J_abs.svg_ is stored in the directory _figs_.
+
+
+-   K_FILE: the file name of an input _K_ matrix (_N_ x _N_ size),
+-   UPPER: the exponent of the upper angular freqeuncy _ω = 10<sup>UPPER</sup>_,
+-   LOWER: the exponent of the lower angular freqeuncy _ω = 10<sup>LOWER</sup>_,
+-   PLT_UPPER: the exponent of the upper angular freqeuncy _ω = 10<sup>PLT_UPPER</sup>_ in the spectrum,
+-   PLT_LOWER: the exponent of the lower angular freqeuncy _ω = 10<sup>PLT_LOWER</sup>_ in the spectrum.
+
 ### 4. Plot of tanδ spectrum
+
+    python 4_plot_spactrum_tan.py K_FILE $UPPER LOWER PLT_UPPER PLT_LOWER
+
+The command plots the tanδ spectrum to the angular frequncy _ω_.
+The output file named _spectrum_tan.svg_ is stored in the directory _figs_.
+
+-   K_FILE: the file name of an input _K_ matrix (_N_ x _N_ size),
+-   UPPER: the exponent of the upper angular freqeuncy _ω = 10<sup>UPPER</sup>_,
+-   LOWER: the exponent of the lower angular freqeuncy _ω = 10<sup>LOWER</sup>_,
+-   PLT_UPPER: the exponent of the upper angular freqeuncy _ω = 10<sup>PLT_UPPER</sup>_ in the spectrum,
+-   PLT_LOWER: the exponent of the lower angular freqeuncy _ω = 10<sup>PLT_LOWER</sup>_ in the spectrum.
