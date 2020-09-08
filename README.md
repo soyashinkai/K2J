@@ -42,10 +42,10 @@ K2J consists of the following four Python codes:
 -   3_plot_spactrum_J_abs.py
 -   4_plot_spactrum_tan.py
 
-### 1. Calculation of compliances _J'_, _J''_, |_J\*_| and tanδ = _J'_/_J''_ at angular frequencies _ω_
+### 1. Calculation of compliances _J'_, _J''_, | _J\*_ | and tanδ = _J'_ / _J''_ at angular frequencies _ω_
 
-### 2. Plot of microrheology
+### 2. Plot of _J'_ and _J''_ curves to the angular frequncy _ω_
 
-### 3. Conversion of a sparce matrix format into a dense contact matrix
+### 3. Plot of | _J\*_ | spectrum
 
-### 4. Conversion of a sparce matrix format into a dense contact matrix
+### 4. Plot of tanδ spectrum
