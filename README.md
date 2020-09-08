@@ -18,7 +18,7 @@ K2J codes require the following Python libraries:
 
 ## Quick Start
 
-Move to the directory [_Codes_](/Codes):
+Move to the directory [_Tutorial_](/Tutorial):
 
     cd Codes
 
@@ -29,4 +29,4 @@ Then, run the following scripts:
     ./run_3.sh
     ./run_4.sh
 
-These scripts generate spectra data in the directory [_data_J_tan_](/data_J_tan) and figures in the directory [_figs_](/figs).
+These scripts generate spectra data in the directory [_data_J_tan_](/Tutorial/data_J_tan) and figures in the directory [_figs_](/Tutorial/figs).
