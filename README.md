@@ -46,12 +46,12 @@ K2J consists of the following four Python codes:
 
     python 1_calc_J_tan.py K_FILE UPPER LOWER
 
-The command converts the input _K_ matrix data into the values of comliances _J'_, _J''_, | _J\*_ = _J'_ + _i J''_ | and tanδ = _J'_ / _J''_ at angular frequencies _10<sup>LOWER</sup> <= ω <= 10<sup>UPPER</sup>_.
-The output files named _J_tan_n{INDEX}.txt_ are stored in the newly made directory _data_J_tan_, where _0 <= INDEX < N_.
+The command converts the input _K_ matrix data into the values of comliances _J'_, _J''_, | _J\*_ = _J'_ + _i J''_ | and tanδ = _J'_ / _J''_ at angular frequencies 10<sup>LOWER</sup> &lt;= _ω_ &lt;= 10<sup>UPPER</sup>.
+The output files named _J_tan_n{INDEX}.txt_ are stored in the newly made directory _data_J_tan_, where 0 &lt;= INDEX &lt; _N_.
 
--   K_FILE: the file name of an input _K_ matrix (_N_ x _N_ size),
--   UPPER: the exponent of the upper angular freqeuncy _ω = 10<sup>UPPER</sup>_,
--   LOWER: the exponent of the lower angular freqeuncy _ω = 10<sup>LOWER</sup>_.
+-   K_FILE: the file name of an input \_K_ matrix (_N_ x _N_ size),
+-   UPPER: the exponent of the upper angular freqeuncy _ω_ = 10<sup>UPPER</sup>,
+-   LOWER: the exponent of the lower angular freqeuncy _ω_ = 10<sup>LOWER</sup>.
 
 ### 2. Plot of _J'_ and _J''_ curves to the angular frequncy _ω_
 
@@ -60,9 +60,9 @@ The output files named _J_tan_n{INDEX}.txt_ are stored in the newly made directo
 The command plots _J'_ and _J''_ curves to the angular frequncy _ω_.
 The output file named _Js.png_ is stored in the newly made directory _figs_.
 
--   K_FILE: the file name of an input _K_ matrix (_N_ x _N_ size),
--   UPPER: the exponent of the upper angular freqeuncy _ω = 10<sup>UPPER</sup>_,
--   LOWER: the exponent of the lower angular freqeuncy _ω = 10<sup>LOWER</sup>_.
+-   K_FILE: the file name of an input \_K_ matrix (_N_ x _N_ size),
+-   UPPER: the exponent of the upper angular freqeuncy _ω_ = 10<sup>UPPER</sup>,
+-   LOWER: the exponent of the lower angular freqeuncy _ω_ = 10<sup>LOWER</sup>.
 
 ### 3. Plot of | _J\*_ | spectrum
 
@@ -71,27 +71,26 @@ The output file named _Js.png_ is stored in the newly made directory _figs_.
 The command plots the | _J\*_ | spectrum to the angular frequncy _ω_.
 The output file named _spectrum_J_abs.svg_ is stored in the directory _figs_.
 
-
--   K_FILE: the file name of an input _K_ matrix (_N_ x _N_ size),
--   UPPER: the exponent of the upper angular freqeuncy _ω = 10<sup>UPPER</sup>_,
--   LOWER: the exponent of the lower angular freqeuncy _ω = 10<sup>LOWER</sup>_,
--   PLT_UPPER: the exponent of the upper angular freqeuncy _ω = 10<sup>PLT_UPPER</sup>_ in the spectrum,
--   PLT_LOWER: the exponent of the lower angular freqeuncy _ω = 10<sup>PLT_LOWER</sup>_ in the spectrum,
--   MAX_LOG_J: the upper value of | _J\*_ | in the heatmap,
--   MIN_LOG_J: the lower value of | _J\*_ | in the heatmap,
+-   K_FILE: the file name of an input \_K_ matrix (_N_ x _N_ size),
+-   UPPER: the exponent of the upper angular freqeuncy _ω_ = 10<sup>UPPER</sup>,
+-   LOWER: the exponent of the lower angular freqeuncy _ω_ = 10<sup>LOWER</sup>,
+-   PLT_UPPER: the exponent of the upper angular freqeuncy _ω\_ = 10<sup>PLT_UPPER</sup> in the spectrum,
+-   PLT_LOWER: the exponent of the lower angular freqeuncy _ω\_ = 10<sup>PLT_LOWER</sup> in the spectrum,
+-   MAX_LOG_J: the upper value of | \_J\*_ | in the heatmap,
+-   MIN_LOG_J: the lower value of | \_J\*_ | in the heatmap,
 -   ASPECT: the aspect ratio of the spectrum.
 
 ### 4. Plot of tanδ spectrum
 
-    python 4_plot_spactrum_tan.py K_FILE $UPPER LOWER PLT_UPPER PLT_LOWER MAX_LOG_tan ASPECT
+    python 4_plot_spactrum_tan.py K_FILE UPPER LOWER PLT_UPPER PLT_LOWER MAX_LOG_tan ASPECT
 
 The command plots the tanδ spectrum to the angular frequncy _ω_.
 The output file named _spectrum_tan.svg_ is stored in the directory _figs_.
 
--   K_FILE: the file name of an input _K_ matrix (_N_ x _N_ size),
--   UPPER: the exponent of the upper angular freqeuncy _ω = 10<sup>UPPER</sup>_,
--   LOWER: the exponent of the lower angular freqeuncy _ω = 10<sup>LOWER</sup>_,
--   PLT_UPPER: the exponent of the upper angular freqeuncy _ω = 10<sup>PLT_UPPER</sup>_ in the spectrum,
--   PLT_LOWER: the exponent of the lower angular freqeuncy _ω = 10<sup>PLT_LOWER</sup>_ in the spectrum,
+-   K_FILE: the file name of an input \_K_ matrix (_N_ x _N_ size),
+-   UPPER: the exponent of the upper angular freqeuncy _ω_ = 10<sup>UPPER</sup>,
+-   LOWER: the exponent of the lower angular freqeuncy _ω_ = 10<sup>LOWER</sup>,
+-   PLT_UPPER: the exponent of the upper angular freqeuncy _ω\_ = 10<sup>PLT_UPPER</sup> in the spectrum,
+-   PLT_LOWER: the exponent of the lower angular freqeuncy _ω\_ = 10<sup>PLT_LOWER</sup> in the spectrum,
 -   MAX_LOG_tan: the upper value of tanδ in the heatmap,
 -   ASPECT: the aspect ratio of the spectrum.
